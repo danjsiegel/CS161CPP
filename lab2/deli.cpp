@@ -37,6 +37,6 @@
     cin >> sandwichSize;
 
     //Prints out the collected Variables
-    cout << "\n You have entered the following information:\n" << "\n Sandwich:\t" << sandwichChoices << "\n Bread:\t" << breadChoice << "\n Condiment:\t" << condimentChoice << "\n Drink: " << drinkChoice << "\n Tab:\t" << sandwichSize << endl;
+    cout << "\n You have entered the following information:\n" << "\n Sandwich:\t" << sandwichChoices << "\n Bread:\t\t" << breadChoice << "\n Condiment:\t" << condimentChoice << "\n Drink: \t\t" << drinkChoice << "\n Tab:\t\t" << sandwichSize << endl;
     return 0;
   }
