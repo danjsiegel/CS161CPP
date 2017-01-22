@@ -25,6 +25,7 @@
     cin >> lastName;
     cout << "Please enter the sales price of the home:";
     cin >> cost_of_house;
+    //fills in variables for price and comission based on percentages laid out in the assignment. Constants used so that if cost or comission percentage change, they can be updated when they are initialized
     price_of_sale = cost_to_sell * cost_of_house;
     price_of_comission = price_of_sale * comission;
     cout << "The " << lastName << "\'s home sold for "  << cost_of_house  << endl;
