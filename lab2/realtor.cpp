@@ -15,9 +15,9 @@
   {
     // Declaration of Variables:
     string lastName;
-    double cost_of_house
-    const double cost_to_sell = .06 * cost_of_house
-    const double comission = .25 * cost_to_sell
+    double cost_of_house;
+    const double cost_to_sell = .06 * cost_of_house;
+    const double comission = .25 * cost_to_sell;
 
     // Collects Last Name
     cout << "Please enter the owner’s last name: ";
