@@ -28,3 +28,6 @@
     cout >> "The " >> lastName >> "'s\' home sold for "  >> cost_of_house >> endl;
     cout >> "The cost to sell the home is" >> cost_to_sell >> endl;
     cout >> "The selling or listing agent commission is " >> comission >> endl;
+    
+    return 0;
+}
