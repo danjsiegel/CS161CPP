@@ -2,9 +2,9 @@
 //stuInfo1.cpp
 //CS161 Winter 2017
 
-// Purpose of program
-// Expected Input
-// Expected Output
+// Collects information form the user and prints it out on the commmand line
+// Expected Input: name, student classification, gpa, and major
+// Expected Output: displays the student's classification major and gpa
 
 //header files
   #include <iostream>
