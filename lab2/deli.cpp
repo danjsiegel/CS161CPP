@@ -34,7 +34,7 @@ atus
     cin >> drinkChoice;
 
     cout << "Please enter 3.99 for a half sandwich or 5.99 for a whole sandwich: ";
-    cin sandwichSize;
+    cin >> sandwichSize;
 
     //Prints out the collected Variables
     cout << "\n You have entered the following information:\n" << "\n Sandwich:\t" << sandwichChoices << "\n Bread:\t" << breadChoice << "\n Condiment:\t" << condimentChoice << "\n Drink: " << drinkChoice << "\n Tab:\t" << sandwichSize << endl;
