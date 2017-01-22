@@ -29,7 +29,7 @@
 
     cout << "Please enter your choice of condiment (one only)\n" << "Mayo, Mustard, Ketchup, or none: ";
     cin >> condimentChoice;
-atus
+
     cout << "Please enter your drink choice\n" << "Coke, Diet, Tea, Coffee, or Water: ";
     cin >> drinkChoice;
 
