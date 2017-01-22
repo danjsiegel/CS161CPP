@@ -26,7 +26,7 @@
     cout << "Last name is: " << lastName << endl;
 
     //Set the variables to temporary variables so that you can swap the values
-    swapFn = firstName; 
+    swapFn = firstName;
     swapLn = lastName;
     firstName = swapLn;
     lastName = swapFn;
