@@ -15,9 +15,9 @@
   {
     // Declaration of Variables:
     string lastName;
-    double cost_of_house;
-    const double cost_to_sell = 0.06 * cost_of_house;
-    const double comission = 0.25 * cost_to_sell;
+    double cost_of_house, price_of_sale, price_of_comission;
+    const double cost_to_sell = 0.06;
+    const double comission = 0.25;
 
     // Collects Last Name
     cout << "Please enter the owner’s last name: ";
@@ -25,9 +25,11 @@
     cin >> lastName;
     cout << "Please enter the sales price of the home:";
     cin >> cost_of_house;
-    cout << "The " << lastName << "\'s home sold for "  << cost_of_house << endl;
-    cout << "The cost to sell the home is" << cost_to_sell << endl;
-    cout << "The selling or listing agent commission is " << comission << endl;
+    price_of_sale = cost_to_sell * cost_of_house;
+    price_of_comission = price_of_sale * comission;
+    cout << "The " << lastName << "\'s home sold for "  << cost_of_house  << endl;
+    cout << fixed << "The cost to sell the home is " << price_of_sale << endl;
+    cout << fixed <<  "The selling or listing agent commission is " << price_of_comission << endl;
 
     return 0;
   }
