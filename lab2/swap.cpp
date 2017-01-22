@@ -14,7 +14,7 @@
   int main()
   {
     // Declaration of Variables:
-    string firstName, lastName, swapfn, swapln;
+    string firstName, lastName, swapFn, swapLn;
 
     // Explains to users the expected input data for the program to work, in this case it is first and last name
     cout << "Enter two names separated by a space: ";
@@ -26,14 +26,14 @@
     cout << "Last name is: " << lastName << endl;
 
     //Set the variables to temporary variables so that you can swap the values
-    firstName = swapfn;
-    lastName = swapln;
-    firstName = swapln;
-    lastName = swapfn;
+    firstName = swapFn;
+    lastName = swapLn;
+    firstName = swapLn;
+    lastName = swapFn;
 
     //Prints the swapped varaibles
-    cout << "First name is: " << firstName << endl;
-    cout << "Last name is: " << lastName << endl;
+    cout << "First name is: " << firstName << swapFn << endl;
+    cout << "Last name is: " << lastName << swapLn << endl;
 
     return 0;
   }
