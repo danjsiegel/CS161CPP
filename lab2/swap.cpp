@@ -28,12 +28,13 @@
     //Set the variables to temporary variables so that you can swap the values
     firstName = swapFn;
     lastName = swapLn;
-    firstName = swapLn;
-    lastName = swapFn;
+    cout << swapFn << swapLn << endl;
+    //firstName = swapLn;
+    //lastName = swapFn;
 
     //Prints the swapped varaibles
-    cout << "First name is: " << firstName << swapFn << endl;
-    cout << "Last name is: " << lastName << swapLn << endl;
+    //cout << "First name is: " << firstName << swapFn << endl;
+    //cout << "Last name is: " << lastName << swapLn << endl;
 
     return 0;
   }
