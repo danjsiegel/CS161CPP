@@ -27,8 +27,7 @@
 
     //Set the variables to temporary variables so that you can swap the values
     swapFn = firstName;
-    swapLn = lastName;
-    firstName = swapLn;
+    firstName = lastName;
     lastName = swapFn;
 
     //Prints the swapped varaibles
