@@ -19,6 +19,8 @@
     const double cost_to_sell = 0.06;
     const double comission = 0.25;
 
+    cout.precision(2);
+
     // Collects Last Name
     cout << "Please enter the owner’s last name: ";
     //Collects values to put into the initialized variables
@@ -27,10 +29,10 @@
     cin >> cost_of_house;
     //fills in variables for price and comission based on percentages laid out in the assignment. Constants used so that if cost or comission percentage change, they can be updated when they are initialized
     price_of_sale = cost_to_sell * cost_of_house;
-    price_of_comission = price_of_sale * comission;
-    cout << "The " << lastName << "\'s home sold for "  << cost_of_house  << endl;
+    price_of_comission =  price_of_sale * comission;
+    cout << fixed << "The " << lastName << "\'s home sold for "  << cost_of_house  << endl;
     cout << fixed << "The cost to sell the home is " << price_of_sale << endl;
-    cout << fixed <<  "The selling or listing agent commission is " << price_of_comission << endl;
+    cout << fixed << "The selling or listing agent commission is " << price_of_comission << endl;
 
     return 0;
   }
