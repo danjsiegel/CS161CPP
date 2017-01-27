@@ -37,7 +37,7 @@
     cin >> gpa;
 
     //Prints out the collected Variables
-    cout << "\n You have entered the following information:\n" << "\n Classification:\t" << classification << "\n Major:\t\t" << major << "\n Gpa:\t\t" << gpa << endl;
+    cout << "\n You have entered the following information:\n" << "\n Classification:\t" << classification << "\n Major:\t\t\t" << major << "\n Gpa:\t\t\t" << gpa << endl;
 
     return 0;
   }
