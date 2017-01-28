@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-  string first, middle, last
+  string first, middle, last;
   cout << "Enter your first name, middle name or initial, and last name separated by spaces: Jane Ann Do" << '\n';
   first = cin.get();
     cin.ignore(256, ' ');
