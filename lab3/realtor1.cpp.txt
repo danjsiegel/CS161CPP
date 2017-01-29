@@ -1,5 +1,5 @@
 //Dan Siegel
-//realtor.cpp
+//realtor1.cpp
 //CS161 Winter 2017
 
 // Collects  last name and cost of house and calculates the cost to sell the home and the comissions
