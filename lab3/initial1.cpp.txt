@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//Dan Siegel
 
 int main(){
   string first, middle, last;
