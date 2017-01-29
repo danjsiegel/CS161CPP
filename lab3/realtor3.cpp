@@ -30,7 +30,7 @@
     //fills in variables for price and comission based on percentages laid out in the assignment. Constants used so that if cost or comission percentage change, they can be updated when they are initialized
     price_of_sale = cost_to_sell * cost_of_house;
     price_of_comission =  price_of_sale * comission;
-    cout << "Home Owner\t Price of Home\t Seller's Cost\t Agent's Commission" << endlZ;
+    cout << "Home Owner\t Price of Home\t Seller's Cost\t Agent's Commission" << endl;
     cout << fixed << setprecision(2) << setw(0) << left << lastName;
     cout << setw(20) << setfill('*') << right << cost_of_house;
     cout << setw(15) << setfill('*') << right << price_of_sale;
