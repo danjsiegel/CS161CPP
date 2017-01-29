@@ -29,10 +29,10 @@
     price_of_sale = cost_to_sell * cost_of_house;
     price_of_comission =  price_of_sale * comission;
     cout << "Home Owner\t Price of Home\t Seller's Cost\t Agent's Commission" << endl;
-    cout << setw(10) << right << name;
-    cout << setw(15) << right << cost_of_house;
-    cout << setw(14) << right << price_of_sale;
-    cout << setw(20) << right << price_of_comission;
+    cout << fixed << setprecision(2) << setw(0) << right << lastName;
+    cout << setw(20) << right << cost_of_house;
+    cout << setw(15) << right << price_of_sale;
+    cout << setw(20) << right << price_of_comission << endl;
 
     return 0;
   }
