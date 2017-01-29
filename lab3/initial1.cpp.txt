@@ -12,3 +12,7 @@ int main(){
    cout << "\n Your Initials are:" << first << middle << last << '\n'; //prints the initials
   return 0;
 }
+./a.out >> initial.cpp.txt //redirected output into end of txt file
+Enter your first name, middle name or initial, and last name separated by spaces: Jane Ann Do
+
+ Your Initials are:DJS
