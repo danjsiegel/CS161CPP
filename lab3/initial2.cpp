@@ -9,6 +9,6 @@ int main(){
   middle = cin.get(); //grabs the first character of the input
    cin.ignore(15,' '); //ignores the first 15 characters or until a white space character.
   last = cin.get();
-   cout << '\n Your Initials are:' << first << middle << last << '\n'; //prints the initials
+   cout << '\n' << first << middle << last << '\n'; //prints the initials
   return 0;
 }
