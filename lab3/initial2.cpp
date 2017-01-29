@@ -1,9 +1,10 @@
 #include<iostream>
 #include<string>
+
 using namespace std;
 
 int main(){
-  string firstIn, middleIn, lastIn; //initials
+  char firstIn, middleIn, lastIn; //initials
   string firstNm, middleNm, lastNm; //Whole Name
   cout << "Enter your first name, middle name or initial, and last name separated by spaces:" << '\n';
   //First Name
@@ -11,12 +12,12 @@ int main(){
   cin.putback(firstIn); //Put's back the value grabbed in first variable
   cin >> firstNm;
   //Middle Name
-  cin.ignore(' '); //tell's the input to ignore white space character.
+  cin.ignore(3, ' '); //tell's the input to ignore white space character.
   middleIn = cin.get(); //grabs the first character of the input
   cin.putback(middleIn);
   cin >> middleNm;
   // Last Name
-  cin.ignore(' '); //ignores the first 15 characters or until a white space character.
+  cin.ignore(3, ' '); //ignores the first 15 characters or until a white space character.
   lastIn = cin.get();
   cin.putback(lastIn);
   cin >> lastNm;
