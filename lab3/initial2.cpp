@@ -22,7 +22,7 @@ int main(){
   cin.putback(lastIn);
   cin >> lastNm;
 
-  cout << "\n Your Full Name is " << firstNm << middleNm << lastNm << '\n'
+  cout << "\n Your Full Name is " << firstNm << ' ' << middleNm << ' ' <<  lastNm << '\n';
   cout << "\n Your Initials are:" << firstIn << middleIn << lastIn << '\n'; //prints the initials
   return 0;
 }
