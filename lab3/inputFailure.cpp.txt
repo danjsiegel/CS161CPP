@@ -25,3 +25,14 @@ int main() {
    
   return 0;
 }
+
+
+line 5: cin = 0x21100
+Line 6: Enter four integers: 
+Line 9: the numbers you entered are: 
+line 10: a = 34, b = 0, c= 30, d= 40
+line 11 cin= 0
+line 12 cin.fail() returns 1
+line 13: Now we will use cin.clear()
+line 15 cin = 0x21100
+line 16 cin.fail returns 0
