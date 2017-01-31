@@ -17,5 +17,6 @@ int main() {
   averageTemp = (highTemp + lowTemp)/2;
   
   out << date << '\t' << highTemp << '\t' << lowTemp << '\t' << averageTemp << endl; //instead of cout, out is used which writes to the declared file. If non exists, it creates it. 
+  out.close(); //closes the file it creates 
   return 0;
 }
