@@ -24,9 +24,9 @@ int main(){
 	} else {
 		last = name3;
 	}
-	if (first < name1 && name1 < last) {
+	if (first != name1 && last != name1) {
 		middle = name1;
-	} else if (first < name2 && name2 < last) {
+	} else if (first != name2 && last != name2) {
 		middle = name2;
 	} else {
 		middle = name3;
