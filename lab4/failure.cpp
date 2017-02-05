@@ -1,24 +1,24 @@
 #include <iostream>
 #include <string>
+#include <ctype.h>
+
 using namespace std;
 
 int main (){
-  char initial;
+  char mI;
   int age;
 
   cout << "Enter your age and your middle initial: ";
-  cin >> age >> initial;
+  cin >> age >> mI;
 
   if (!age) {
     cout << "your age is bad" << endl;
   } else {
-    cout << age << end;
+  cout << "your age is: " << age;
+  } 
+  if (!isalpha(mI)){
+  cout << " your initial was bad" << endl;
+  } else { 
+  cout << " Your middle initial is: " << mI << endl;
   }
-
-  if (initial != [a-z] || initial != [A-Z]) {
-    cout << "your initial is bad" << endl;
-  } else {
-    cout >> initial << endl;
-  }
-
 }
