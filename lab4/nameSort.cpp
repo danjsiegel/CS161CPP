@@ -22,7 +22,7 @@ int main(){
 	} else if (name2 > name1 && name2 > name3) {
 		last = name2;
 	} else {
-		last = name 3;
+		last = name3;
 	}
 	if (first < name1 && name1 < last) {
 		middle = name1;
