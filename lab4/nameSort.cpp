@@ -4,34 +4,30 @@ using namespace std;
 
 int main(){
 	string name1,name2,name3;
-	string first, middle, last;
-
 	cout << "enter 3 names separated by a space: ";
 	cin >> name1 >> name2 >> name3;
-	cout << endl;
-	//First Names
+
 	if (name1 < name2 && name1 < name3) {
-		first = name1;
+		cout << name1 << endl;
 	} else if (name2 < name1 && name2 < name3) {
-		first = name2;
+		cout << name2 << endl;
 	} else {
-		first = name3;
+		cout << name3 << endl;
 	}
 	if (name1 > name2 && name1 > name3) {
-		last = name1;
+		cout << name1 << endl;
 	} else if (name2 > name1 && name2 > name3) {
-		last = name2;
+		cout << name2 << endl;
 	} else {
-		last = name3;
+		cout << name3 << endl;
 	}
 	if (first != name1 && last != name1) {
-		middle = name1;
+		cout << name1 << endl;
 	} else if (first != name2 && last != name2) {
-		middle = name2;
+		cout << name2 << endl;
 	} else {
-		middle = name3;
+		cout << name3 << endl;
 	}
 
-	cout << first << '\n' << middle << '\n' << last << endl;
 	return 0;
 }
