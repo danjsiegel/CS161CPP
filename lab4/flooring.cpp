@@ -35,7 +35,7 @@ int main (){
         cout << "You chose Option " << floorNumber << ":  Your selection is not available." << endl;
         break;
     }
-  } while (floorNumber != 999 && cin.fail() == false);
+  } while (floorNumber != 999 && !cin.fail());
 
   return 0;
 
