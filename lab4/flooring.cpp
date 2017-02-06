@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -34,7 +35,7 @@ int main (){
         cout << "You chose Option " << floorNumber << ":  Your selection is not available." << endl;
         break;
     }
-  } while (floorNumber != 999);
+  } while (floorNumber != 999 && cin.fail() == false);
 
   return 0;
 
