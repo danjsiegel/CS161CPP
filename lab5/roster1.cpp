@@ -5,7 +5,8 @@
 using namespace std;
 
 int main() {
-  int counter, numerOfStudents;
+  int counter = 1;
+  int numerOfStudents;
   string studentName;
 
   ofstream out("students.txt");
@@ -14,13 +15,13 @@ int main() {
   cin >> numerOfStudents;
   cout << endl;
 
-  if (numerOfStudents > 0 && !numerOfStudents) {
-    while (counter <= numerOfStudents) {
+  if (numerOfStudents > 0) {
+    while (numerOfStudents >= counter) {
       cout << "Enter the student’s name: ";
       cin >> studentName;
       cout << endl;
       out << studentName;
-      counter = counter + 1; 
+      counter = counter + 1;
     }
   } else {
     cout << "You didn't enter a valid number of students" << endl;
