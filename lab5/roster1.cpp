@@ -20,7 +20,7 @@ int main() {
       cout << "Enter the student’s name: ";
       cin >> studentName;
       cout << endl;
-      out << studentName;
+      out << "Student Number " << counter << ": " << studentName << endl;
       counter = counter + 1;
     }
   } else {
