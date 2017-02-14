@@ -26,4 +26,5 @@ int main() {
   } else {
     cout << "You didn't enter a valid number of students" << endl;
   }
+  return 0;
 }
