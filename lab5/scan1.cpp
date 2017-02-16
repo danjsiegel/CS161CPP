@@ -8,9 +8,9 @@ int main() {
   double priceOfItem;
   string nameofItem;
 
-  ofstream out("invoice1.txt.");
+  ofstream out("invoice1.txt");
 
-  do{
+  while (priceOfItem != 999){
     cout << "Please scan the name of the next item: ";
     cin >> nameofItem;
     cout << endl;
@@ -19,16 +19,12 @@ int main() {
     cin >> priceOfItem;
     cout << endl;
 
-    switch (priceOfItem){
-        case 999:
-          break;
-        case *:
+    if (priceOfItem != 999) {
         out << nameofItem << "#" << priceOfItem << endl;
-        break;
+	} else {
     }
 
-
-  } while (priceOfItem != 999);
+  };
 
   return 0;
 }
