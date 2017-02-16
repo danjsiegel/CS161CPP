@@ -19,7 +19,14 @@ int main() {
     cin >> priceOfItem;
     cout << endl;
 
-    out << nameofItem << "#" << priceOfItem << endl;
+    switch (priceOfItem){
+        case 999:
+          break;
+        case *:
+        out << nameofItem << "#" << priceOfItem << endl;
+        break;
+    }
+
 
   } while (priceOfItem != 999);
 
