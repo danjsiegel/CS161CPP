@@ -10,7 +10,7 @@ int main() {
 
   ofstream out("invoice1.txt.");
 
-  while (nameofItem != "999" || priceOfItem != 999){
+  do{
     cout << "Please scan the name of the next item: ";
     cin >> nameofItem;
     cout << endl;
@@ -21,7 +21,7 @@ int main() {
 
     out << nameofItem << "#" << priceOfItem << endl;
 
-  };
+  } while (priceOfItem != 999);
 
   return 0;
 }
