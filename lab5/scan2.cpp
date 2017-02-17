@@ -5,14 +5,20 @@
 using namespace std;
 
 int main() {
-  string nameofItem, line;
+  string nameofItem, lineitem, line;
   ifstream invoiceFile("invoice1.txt");
-
-  if (invoiceFile,is_open()){
+  
     cout << "Enter an Item: ";
-    getline(cin, nameofItem);
-    ofin << "Item is: " << nameofItem << endl;
-  }
-
+	cin >> nameofItem;
+	
+	while(invoiceFile) {
+    invoiceFile >> lineitem;
+		if(nameofItem == lineitem){
+			getline(invoiceFile, line)
+			cout << line << endl;
+		} else {
+			cout << "item not found" << endl;
+		}
+	}
   return 0;
 }
