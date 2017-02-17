@@ -10,13 +10,13 @@ int main() {
   ifstream invoiceFile("invoice1.txt");
   
 	
-	while(!invoiceFile.eof() {
+	while(!invoiceFile.eof()) {
 		invoiceFile >> costOfItem;
 		sumOfItems = sumOfItems + costOfItem;
 		
 	}
 	invoiceFile.close();
-	cout << f.rdbuf() << endl;
+	cout << invoiceFile.rdbuf() << endl;
 	cout << "total" << sumOfItems << endl;
   return 0;
 }
