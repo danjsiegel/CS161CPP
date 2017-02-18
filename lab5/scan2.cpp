@@ -5,20 +5,26 @@
 using namespace std;
 
 int main() {
-  string nameofItem, lineitem, line;
-  ifstream invoiceFile("invoice1.txt");
-  
-    cout << "Enter an Item: ";
-	cin >> nameofItem;
+  string nameofItem, lineitem, price;
+  string itemMatches;
+    
+    	do {
+    		cout << "Enter an Item: ";
+    		cin >> nameofItem;
 	
-	while(invoiceFile) {
-    invoiceFile >> lineitem;
-		if(nameofItem == lineitem){
-			getline(invoiceFile, line);
-			cout << line << endl;
-		} else {
-			cout << "item not found" << endl;
+		itemMatches = "item not found";
+		ifstream invoiceFile("invoice1.txt");
+		while (!invoiceFile.eof()) {
+		getline(invoiceFile, lineitem, '#');
+		getline(invoiceFile, price);
+		if (lineitem == nameofItem) {
+		itemMatches = price;} 
+		
 		}
-	}
+		if (nameofItem != "exit") {
+		cout << "The cost of: " << nameofItem << " is "  << itemMatches << endl;}
+		invoiceFile.close();
+	} while (nameofItem != "exit");
+	
   return 0;
 }
