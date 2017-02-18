@@ -22,3 +22,16 @@ int main (){
   cout << " Your middle initial is: " << mI << endl;
   }
 }
+
+// good input
+Enter your age and your middle initial: 15 J
+your age is: 15 Your middle initial is: J
+
+//bad results both 
+Enter your age and your middle initial: j 12
+your age is bad
+ your initial was bad
+//good age bad initial 
+Enter your age and your middle initial: 12 1
+your age is: 12 your initial was bad
+//bad age good initial 

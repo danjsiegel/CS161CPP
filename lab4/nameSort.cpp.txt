@@ -31,3 +31,15 @@ int main(){
 
 	return 0;
 }
+
+//output
+enter 3 names separated by a space: Z B A
+A
+B
+Z
+
+//
+enter 3 names separated by a space: test3 test2 test1
+test1
+test2
+test3

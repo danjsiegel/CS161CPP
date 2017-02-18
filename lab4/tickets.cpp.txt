@@ -22,3 +22,25 @@ int main(){
 
 	return 0;
 }
+
+
+//Under 17, w coupon
+What is your age: 12
+Do you have a coupon? [Y/N]: y
+Your Ticket price is: 4.5
+//Under 17 no coupon 
+
+What is your age: 12
+Do you have a coupon? [Y/N]: n
+Your Ticket price is: 6
+
+//over 18 coupon 
+What is your age: 30
+Do you have a coupon? [Y/N]: Y
+Your Ticket price is: 6
+
+//Over 18 no coupon
+What is your age: 30
+Do you have a coupon? [Y/N]: n
+Your Ticket price is: 8
+

@@ -17,3 +17,13 @@ int main(){
 
   return 0;
 }
+
+// good input results
+Enter a numberator and a denominator: 3 4
+
+The decimal value of the numerator 3 divided by the denominator 4 is 0.75
+
+//bad input results 
+Enter a numberator and a denominator: 3 0
+
+The decimal value of the numerator 3 divided by the denominator 0 is inf

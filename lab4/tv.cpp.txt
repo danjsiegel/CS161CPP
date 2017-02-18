@@ -36,3 +36,40 @@ int main (){
   return 0;
 
 }
+
+//Output
+
+Enter the model number of your choice:
+Model 100: Remote control, timer, and stereo for $1000
+Model 200: The same as Model 100, plus picture-in-picture, for $1200
+Model 300: The same as Model 200, plus HDTV, flat screen, and a 16 x 9 aspect ratio, for $2400
+Enter 999 to exit
+Enter the model number of your choice: 100
+You chose Model 100 TV with these features:
+remote control, timer, and stereo sound.
+Your price will be $1000.
+Enter the model number of your choice:
+Model 100: Remote control, timer, and stereo for $1000
+Model 200: The same as Model 100, plus picture-in-picture, for $1200
+Model 300: The same as Model 200, plus HDTV, flat screen, and a 16 x 9 aspect ratio, for $2400
+Enter 999 to exit
+Enter the model number of your choice: 200
+You chose Model 200 TV with these features:
+picture-in-picture, remote control, timer, and stereo sound
+Your price will be $1200
+Enter the model number of your choice:
+Model 100: Remote control, timer, and stereo for $1000
+Model 200: The same as Model 100, plus picture-in-picture, for $1200
+Model 300: The same as Model 200, plus HDTV, flat screen, and a 16 x 9 aspect ratio, for $2400
+Enter 999 to exit
+Enter the model number of your choice: 300
+You chose Model 300 TV with these features:
+HDTV, flat screen, 16 x 9 aspect ratio, picture-in-picture, remote control, timer, and stereo sound
+Your price will be $2400.
+Enter the model number of your choice:
+Model 100: Remote control, timer, and stereo for $1000
+Model 200: The same as Model 100, plus picture-in-picture, for $1200
+Model 300: The same as Model 200, plus HDTV, flat screen, and a 16 x 9 aspect ratio, for $2400
+Enter 999 to exit
+Enter the model number of your choice: 999
+Goodbye

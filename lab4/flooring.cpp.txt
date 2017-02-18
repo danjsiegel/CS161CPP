@@ -40,3 +40,36 @@ int main (){
   return 0;
 
 }
+
+//Output (whitespace output was removed) 
+Enter the number that matches your flooring choice:
+Option 1: Scored concrete for $3000
+Option 2: Carpeting for $5000
+Option 3: Wood floors in the living areas, carpeting in the bedrooms, and tile in the bath areas for $10,000
+Enter 999 to exit
+1
+
+You chose Option 1: Scored concrete for $3000.
+Enter the number that matches your flooring choice:
+Option 1: Scored concrete for $3000
+Option 2: Carpeting for $5000
+Option 3: Wood floors in the living areas, carpeting in the bedrooms, and tile in the bath areas for $10,000
+Enter 999 to exit
+2
+
+You chose Option 2: Carpeting for $5000.
+Enter the number that matches your flooring choice:
+Option 1: Scored concrete for $3000
+Option 2: Carpeting for $5000
+Option 3: Wood floors in the living areas, carpeting in the bedrooms, and tile in the bath areas for $10,000
+Enter 999 to exit
+3
+
+You chose Option 3:  Wood floors in the living areas, carpeting in the bedrooms, and tile in the bath areas for $10,000.
+Enter the number that matches your flooring choice:
+Option 1: Scored concrete for $3000
+Option 2: Carpeting for $5000
+Option 3: Wood floors in the living areas, carpeting in the bedrooms, and tile in the bath areas for $10,000
+Enter 999 to exit
+999
+Goodbye
