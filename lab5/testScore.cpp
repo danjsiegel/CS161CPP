@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+string name;
+int score;
+bool lessThan100;
+bool greaterThan0;
+int count = 4;
+ofstream out("scores.txt");
+
+	while (count > 0) {
+		lessThan100 = false; //values false by default
+		greaterThan0 = false; //values false by default
+		
+		cout << "Enter a student's Name: ";
+		cin >> name;
+		cout << "Enter a score between 1 and 100: ";
+		cin >> score;
+		
+		if (score < 101) {
+		lessThan100 = true;
+		} else {
+		lessThan100 = false;
+		}
+
+		if (score > 0) {
+		greaterThan0 = true;
+		} else {
+		greaterThan0 = false;
+		}
+		
+		if (lessThan100 == true && greaterThan0 == true) {
+		do {
+		out << name << " " << score << endl;
+		lessThan100 = false; //resets value to false
+		greaterThan0 = false; //rests value to false
+		} while (lessThan100 == true && greaterThan0 == true);
+		}
+		count = count -1;
+	}
+  return 0;
+}
