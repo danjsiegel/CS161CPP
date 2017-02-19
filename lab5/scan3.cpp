@@ -14,12 +14,12 @@ int main() {
     	
 	cout << "Invoice:" << endl;
 	ifstream invoiceFile("invoice1.txt");
-	while (!invoiceFile.eof()) {
+	while (!invoiceFile.eof()) {  //reads the file until the end of file
 	getline(invoiceFile, lineitem, '#');
 	getline(invoiceFile, price);
 	
-	istringstream iss(price);
-	iss >> tempPrice;
+	istringstream iss(price);  //turns the variable back into an input stream
+	iss >> tempPrice;   //now that the variable is an input stream, reassign it to a double variable instead of an int. 
 	totalPrice = totalPrice + tempPrice;
 		
 	count = count + 1; 
