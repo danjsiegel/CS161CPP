@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+	int main() {
+	int number1, number2;
+	int gcd;
+	int i;
+
+	cout << "Enter a first number " << endl;
+	cin >> number1;
+
+	cout << "Enter a second number: " <<  endl;
+	cin >> number2;
+
+	if (number1 > number2) {
+	gcd = number2;	
+	} else {
+	gcd = number1;	
+	}
+
+	do {
+		gcd = gcd - 1;
+	} while ((number1 % gcd != 0) || (number2 % gcd != 0));
+			
+	cout << "gcd(" << number2 << ", " << number1 << ") is: " << gcd << endl;
+
+	return 0;
+	}
+
+

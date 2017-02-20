@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+	int main() {
+	char letter = '\0';
+	string userSentence = "";
+	int count = 0;
+
+	while (getline(cin, userSentence)) {
+		cout << "Enter a sentence: ";
+		getline(cin, userSentence);	
+	
+		cout << "Enter a unique character: ";
+		cin >> letter;
+	
+		for(int i=0; i<userSentence.length(); i++){
+		if(userSentence[i]==letter){
+		count = count + 1;		
+			} 
+		}
+		cout << count << endl;
+		count = 0;
+	}
+	return 0;
+	}
