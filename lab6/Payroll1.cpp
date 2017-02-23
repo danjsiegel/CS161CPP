@@ -13,7 +13,7 @@ int main()
 	int hours;	
 	double rate, tax;
 
-	cout << "Employee Name" << "\t" << "Hourly Rate of Pay" << "\t" << "Hours Worked" << "\t" << "Tax Rate" << "\t" << "Gross Pay" << "\t" << "Net Pay" << endl;
+	cout << left << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(12) << "Hours Worked" << left << setw(10)<< "Tax Rate" << setw(9) << "Gross Pay" << setw(10) << "Net Pay" << endl;
 	while (!payrollFile.eof()) {
 		
 		getline(payrollFile, name, '#');
@@ -28,7 +28,7 @@ int main()
 		//delimiter = delimiter + hours.length() + 1;
 		//tax = line.substr(9,line.find('\0')); 
 		if (name.length() > 1){
-		cout << name << "\t" << rate << "\t" << hours << "\t" << tax << endl;
+		cout << left << setw(25) << name << setw(20) << left << rate << setw(10) << hours << setw(10) << tax << endl;
 		}
 	} 
 	payrollFile.close();
