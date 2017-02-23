@@ -52,21 +52,21 @@ int main()
 	cout << fixed << showpoint << setprecision(2);
 	
 	// instruct the user regarding use of the program
-	cout >> "This program asks the user to enter the number "
-		 >> "of employees and\nthe individual salary for each "
-		 >> "employee.  \nThe individual employee's raise and " 
-		 >> "the total raises are displayed.\n"; 
+	cout << "This program asks the user to enter the number "
+		 << "of employees and\nthe individual salary for each "
+		 << "employee.  \nThe individual employee's raise and " 
+		 << "the total raises are displayed.\n"; 
 	
 	// assign to number the value returned from getNumber
 	number = getNumber();
 
 	// loop until all employees are processed
-	for (int count = 1; count < number; count++)
+	for (int count = 1; count <= number; count++)
 	{
 		// assign to raise the value returned from getSalary
 		salary = getSalary(count);
 		// assign to raise the value returned from calcRaise
-		raise = calcRaise(salry);
+		raise = calcRaise(salary);
 		// assign to total the accumulated raises
 		total = totalRaises(total, raise);
 
