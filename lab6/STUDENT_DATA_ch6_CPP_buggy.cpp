@@ -18,7 +18,7 @@ int main() {
 	double salary, raise, total;
 
 	// set the formatting for output
-	//cout << fixed << showpoint << setprecision(2);
+	cout << fixed << showpoint << setprecision(2);
 	
 	// instruct the user regarding use of the program
 	cout << "This program asks the user to enter the number " << "of employees and\nthe individual salary for each " << "employee.  \nThe individual employee's raise and " << "the total raises are displayed.\n"; 
@@ -76,7 +76,7 @@ double getSalary(int empNumber) {
 
 /* the function calcRaise returns the raise 
    calculated for the salary passed */
-int calcRaise(double salary) {
+double calcRaise(double salary) {
 	/* test salary value to calculate raise and
 	   return salary times percentage applicable */
 	if (salary <= 25000)
@@ -91,6 +91,6 @@ int calcRaise(double salary) {
 /* the function totalRaises returns the new
    total of raises using the current total and
    current raise being processed */
-double totalRaises(double raise, double total); {
+double totalRaises(double raise, double total) {
 	return total + raise;
 }
