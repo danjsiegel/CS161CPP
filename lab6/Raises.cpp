@@ -66,18 +66,18 @@ int main()
 	{
 		// assign to raise the value returned from getSalary
 		salary = getSalary(count);
+		cout << salary << endl;
 		// assign to raise the value returned from calcRaise
 		raise = calcRaise(salary);
 		// assign to total the accumulated raises
 		total = totalRaises(total, raise);
-
 		// display current employee raise
 		cout << "Employee " << count << " receives a raise of $" 
-			 << salary << endl;
+			 << raise << endl;
 	}
 
 	// display total raises
-	cout << "\n\nThe total cost of raises: $" << raise << endl;
+	cout << "\n\nThe total cost of raises: $" << total << endl;
 
 
 return 0;
@@ -122,15 +122,18 @@ double getSalary(int empNumber)
    calculated for the salary passed */
 double calcRaise(double salary)  //fixed data type
 {
-	/* test salary value to calculate raise and
+	double raiseamt;
+		/* test salary value to calculate raise and
 	   return salary times percentage applicable */
-	if (salary <= 25000)
-		return salary * .05;
-	else if (salary <= 35000)
-		return salary * .04;
-	else
-		return salary * .03;
-
+	if (salary <= 25000) {
+		raiseamt = salary * .05;
+	} else if (salary <= 35000) {
+		raiseamt = salary * .04;
+	}else {
+		raiseamt = salary * .03;
+	}
+	return raiseamt;
+	
 }
 
 /* the function totalRaises returns the new
@@ -138,5 +141,8 @@ double calcRaise(double salary)  //fixed data type
    current raise being processed */
 double totalRaises(double raise, double total) //removed ; before the {}
 {
-	return total + raise;
+	double finalamt;	
+	finalamt = total + raise;
+	return finalamt;
+
 }
