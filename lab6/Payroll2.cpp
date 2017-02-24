@@ -5,6 +5,8 @@
 #include <sstream>
 using namespace std;
 
+void grossPay(double payRate, int hoursWorked);
+void netPay(double grossAmt, double taxRate);
 
 int main()
 {
@@ -13,9 +15,6 @@ int main()
 	int hours;	
 	double rate, tax, net, gross;
 	
-	void grossPay(double payRate, int hoursWorked);
-	void netPay(double grossAmt, double taxRate);
-
 	cout << left << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(12) << "Hours Worked" << left << setw(10)<< "Tax Rate" << setw(9) << "Gross Pay" << setw(10) << "Net Pay" << endl;
 	while (!payrollFile.eof()) {
 		
