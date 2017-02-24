@@ -24,7 +24,7 @@ int main()
 		istringstream iss(line);
 		iss >> rate >> hours >> tax;
 		gross = grossPay(rate, hours);
-		net = 
+		net = netPay(gross, tax); 
 		//name = line.substr(0, line.find('#'));
 		//delimiter = name.length() + 1;
 		//rate = line.substr(delimiter, line.find(' '));
@@ -45,6 +45,6 @@ void grossPay (double payRate, int hoursWorked) {
 }
 void netPay(double grossAmt, double taxRate) {
 	double rate;
-	rate = 1 - (0.taxRate);
+	rate = (100 - taxRate)/100;
 	return grossAmt * rate;
 	}
