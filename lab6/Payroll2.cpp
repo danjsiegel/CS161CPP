@@ -15,7 +15,7 @@ int main()
 	int hours;	
 	double rate, tax, net, gross;
 	
-	cout << left << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(12) << "Hours Worked" << left << setw(20)<< "Tax Rate" << setw(20) << "Gross Pay" << setw(15) << "Net Pay" << endl;
+	cout << left << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(15) << "Hours Worked" << left << setw(20)<< "Tax Rate" << setw(20) << "Gross Pay" << setw(15) << "Net Pay" << endl;
 	while (!payrollFile.eof()) {
 		
 		getline(payrollFile, name, '#');
@@ -23,8 +23,7 @@ int main()
 		istringstream iss(line);
 		iss >> rate >> hours >> tax;
 		gross = grossPay(rate, hours);
-		//net = netPay(gross, tax); 
-		name = line.substr(0, line.find('#'));
+		//name = line.substr(0, line.find('#'));
 		//delimiter = name.length() + 1;
 		//rate = line.substr(delimiter, line.find(' '));
 		//hours = line.substr(delimiter + 4, delimiter + 5);	
