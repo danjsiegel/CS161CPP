@@ -6,7 +6,7 @@
 using namespace std;
 
 double grossPay(double payRate, int hoursWorked);
-void netPay(double grossAmt, double taxRate);
+void netPay(double grossAmt, double taxRate, double& netUpdate);
 
 int main()
 {
@@ -35,12 +35,12 @@ int main()
 		//tax = line.substr(9,line.find('\0')); 
 		if (name.length() > 1){
 		cout << left << setw(25) << name << setw(20) << left << rate << setw(15) << hours << setw(20) << tax << setw(20) << gross << setw(15);
-		netPay(gross, tax);
+		netPay(gross, tax, net);
 		grossTotal = grossTotal + gross;
-		netTotal = netTotal + netPay(gross, tax);
+		netTotal = netTotal + net;
 		}
 	} 
-	cout << "Gross Total " << grossTotal << " Net Total " << netTotal << endl;
+	cout << right << setw(60) << "Gross Total " << setw(10) <<  grossTotal << setw (20) << " Net Total " << setw(10) << netTotal << endl;
 	payrollFile.close();
 	return 0;
 }
@@ -51,12 +51,13 @@ double grossPay (double payRate, int hoursWorked) {
 	return total;
 	
 }
-void netPay(double grossAmt, double taxRate) {
+void netPay(double grossAmt, double taxRate, double& netUpdate) {
 	double rate, total;
 	
 	rate = (100 - taxRate);
 	rate = rate/100;
 	total = grossAmt * rate;
 	cout << fixed << showpoint;
-	cout << setprecision(2) << total << endl;;
+	cout << setprecision(2) << total << endl;
+	netUpdate = total;
 	}
