@@ -12,16 +12,15 @@ int main()
 {
 	ifstream payrollFile("payroll.txt");
 	string name, line;
-	int hours;
-	int count = 1;
+	int hours, count;
 	double rate, tax, net, gross;
 	double grossTotal = 0;
 	double netTotal = 0;
 	
 	cout << fixed << showpoint << setprecision(2);
-	cout << left << setw(10) << "Emp No" setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(15) << "Hours Worked" << left << setw(20)<< "Tax Rate" << setw(20) << "Gross Pay" << setw(15) << "Net Pay" << endl;
+	cout << left << setw(10) << "Emp No " << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(15) << "Hours Worked" << left << setw(20)<< "Tax Rate" << setw(20) << "Gross Pay" << setw(15) << "Net Pay" << endl;
 	while (!payrollFile.eof()) {
-		
+		count++;
 		getline(payrollFile, name, '#');
 		getline(payrollFile, line, '\n');
 		istringstream iss(line);
@@ -35,14 +34,13 @@ int main()
 		//delimiter = delimiter + hours.length() + 1;
 		//tax = line.substr(9,line.find('\0')); 
 		if (name.length() > 1){
-		cout << left < setw(10) << count << setw(25) << name << setw(20) << left << rate << setw(15) << hours << setw(20) << tax << setw(20) << gross << setw(15);
+		cout << left << setw(10) << count << setw(25) << name << setw(20) << left << rate << setw(15) << hours << setw(20) << tax << setw(20) << gross << setw(15);
 		netPay(gross, tax, net);
 		grossTotal = grossTotal + gross;
 		netTotal = netTotal + net;
-		count++;
 		}
 	} 
-	cout << right << setw(60) << "Gross Total " << setw(10) <<  grossTotal << setw (20) << " Net Total " << setw(10) << netTotal << endl;
+	cout << right << setw(87) << "Gross Total " << setw(10) <<  grossTotal << setw (8) << " Net Total " << setw(9) << netTotal << endl;
 	payrollFile.close();
 	return 0;
 }
