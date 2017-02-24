@@ -14,6 +14,8 @@ int main()
 	string name, line;
 	int hours;	
 	double rate, tax, net, gross;
+	double grossTotal = 0;
+	double netTotal = 0;
 	
 	cout << fixed << showpoint << setprecision(2);
 	cout << left << setw(25) << "Employee Name" << setw(20) << left << "Hourly Rate of Pay" << left << setw(15) << "Hours Worked" << left << setw(20)<< "Tax Rate" << setw(20) << "Gross Pay" << setw(15) << "Net Pay" << endl;
@@ -34,8 +36,11 @@ int main()
 		if (name.length() > 1){
 		cout << left << setw(25) << name << setw(20) << left << rate << setw(15) << hours << setw(20) << tax << setw(20) << gross << setw(15);
 		netPay(gross, tax);
+		grossTotal = grossTotal + gross;
+		netTotal = netTotal + netPay(gross, tax);
 		}
 	} 
+	cout << "Gross Total " << grossTotal << " Net Total " << netTotal << endl;
 	payrollFile.close();
 	return 0;
 }
