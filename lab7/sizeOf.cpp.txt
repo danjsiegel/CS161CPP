@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string.h>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int main(){
+
+	cout << "The size of char on this computer is " <<  sizeof(char) << endl;
+	cout << "The size of short on this computer is " << sizeof(short) << endl;
+	cout << "The size of int on this computer is " << sizeof(int) << endl;
+	cout << "The size of long on this computer is " << sizeof(long) << endl;
+
+return 0;
+}
+
