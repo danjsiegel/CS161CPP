@@ -25,9 +25,9 @@ int main()
 	}
 	else if (gpa < 2.0)
 		
-		cout << "your gpa is too low for aide";
+		cout << "your gpa is too low for aid";
 	else {
-		cout << "too high";
+		cout << "invalid tuition gpa combo";
 	}
 	cout << aidamt << endl; 
 	return 0;
