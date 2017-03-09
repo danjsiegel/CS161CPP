@@ -14,11 +14,12 @@ char ticket[UPPER_BALCONY+1][SATURDAY+1][MAX_SEATS];
 
 for(int section = FLOOR; section <= UPPER_BALCONY; section++){
 	for(int day = THURSDAY; day <=SATURDAY; day++){
-		for(seat = 0; seat < MAX_SEATS; seat++){
+		for(int seat = 0; seat < MAX_SEATS; seat++){
 			ticket[section][day][seat] = indicator[AVAILABLE];
+			cout << ticket[section][day][seat] << endl;
+			}
 		}
 	}
-}
 
 
 
