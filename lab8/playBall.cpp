@@ -35,8 +35,9 @@ int main(){
 		}
 	cout << endl;
 	//largest in the columns
+	int index = 0;
 	for (int column = 1; column < 5; column++){
-			int index = 0;
+			
 			int largest = stats[0][column];
 			int player = stats[0][column];
 			for (int row = 0; row < 4; row++){
@@ -45,10 +46,9 @@ int main(){
 				player = stats [row][0];		
 				}
 			highScoresValue[index] = player;
-			index = index + 1;			
-			} 
-			
-			
+		
+			}
+			index = index + 1;	 		
 	}
 	for (int index = 0; index < 4; index++){
 		cout << "Player " << highScoresValue[index] << " had the most " << scoreTypes[index] << endl;
