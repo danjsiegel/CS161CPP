@@ -3,29 +3,6 @@
 #include <fstream>
 
 
-/*
-Your instructor wants to create a struct to keep track of student grades. The information
-the instructor needs includes the student’s 
-string first name, 
-string last name, a 
-int six-digit ID number, 
-int array ten programming assignment grades, 
-int array three exam grades, and 
-int a final exam grade. 
-Define a
-struct named grades that will contain all of these members.
-
-
-Design a program that prepares a grade book for an instructor. Use struct grades and
-the variable students of data type grades declared in Exercise 3. Input the student
-information (first name, last name, six-digit ID number, ten programs, three exam grades,
-and final exam grade) from the file gradeBook.txt, which is saved in the Chap09 folder of
-your Student Data Files. Calculate the grade as follows: programs 30% total, exams 15%
-each, and final exam 25%. Students with 90 and above averages earn an A, 80 to 89 earn a
-B, 70 to 79 earn a C, 60 to 69 earn a D, and all grades below 60 earn an F. Display each
-student’s name and final grade.
-*/
-
 const string DATA_FILE="gradeBook.txt";
 const int NUMBER_OF_ASSIGNMENTS = 10;
 const int NUMBER_OF_EXAMS = 3;
@@ -92,6 +69,16 @@ char get_letter_grade(float grade){
 
 
 int main(){
+	fin.open(DATA_FILE);
+		int count = 0;
+		while(!DATA_FILE.eof()){
+			string line;
+			getline(DATA_FILE, "\n");
+			count++;
+		}
+
+		cout << count << endl;
+	fin.close();
 	fin.open(DATA_FILE);
 	// Do stuff
 	while(true){
