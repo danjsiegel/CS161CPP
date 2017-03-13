@@ -135,3 +135,69 @@ int validFloor (string floorinput){
 	return floor; 
 }
 
+
+
+
+Output recorded from running program: 
+________________________________________________________________________________________________________
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+tf
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+tf
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+fu
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+fu
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+fu
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+sb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+sb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+sb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+fb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+fb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+tb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+tb
+Enter a day, (T)hursday, (F)riday, (S)aturday, (x)exit
+Enter a level, (F)loor, (B)alcony, (U)pper floor
+x
+Thursday
+	Floor Tickets sold: 2 $60
+	Balcony Tickets sold: 2 $40
+	Upper Balcony Tickets sold: 0 $0
+Friday
+	Floor Tickets sold: 0 $0
+	Balcony Tickets sold: 2 $40
+	Upper Balcony Tickets sold: 3 $30
+Saturday
+	Floor Tickets sold: 0 $0
+	Balcony Tickets sold: 3 $60
+	Upper Balcony Tickets sold: 0 $0
+Total tickets sold for all concerts: 12 $230
+Total Floor tickets sold for all concerts: 2 $60
+Total Balcony tickets sold for all concerts: 7 $140
+Total Upper Balcony tickets sold for all concerts: 3 $30
+Total Tickets sold for Thursday concerts: 4 $100
+Total Tickets sold for Friday concerts: 5 $70
+Total Tickets sold for Saturday concerts: 3 $60
+
+
+
