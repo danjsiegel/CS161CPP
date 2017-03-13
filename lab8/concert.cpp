@@ -46,38 +46,41 @@ int main(){
 					ticket[userFloor][userDay][i] = 1;
 					break;			
 				}		
-			} 
-			
+			} 	
 		}
 
 	}
-//
+//Totals by floor and day
+int totalDollarAmountOverall = 0;
+int totalTicketsSoldOverall = 0;
+for (int day = THURSDAY; day <=SATURDAY; day++){
+	
+	cout << displayDay[day] << endl;
+	for(int section = FLOOR; section <= UPPER_BALCONY; section++){
+			int sum = 0;
+			int floorTotal = 0;	
+				for(int seat = 0; seat < MAX_SEATS; seat++){										
+					sum = sum + ticket[section][day][seat];
+					}	
+			floorTotal = sum * priceArray[section];		
+			cout << "\t" <<  displayFloor[section] << " Tickets sold: " << sum << " $" << floorTotal << endl;
+			totalDollarAmountOverall = totalDollarAmountOverall + floorTotal;
+			totalTicketsSoldOverall = totalTicketsSoldOverall + sum;
+			} 
+	} 
+//Total overall tickets 
+cout << "Total tickets sold for all concerts: " << totalTicketsSoldOverall << " $" << totalDollarAmountOverall << endl;
+
+//Total per floor
 
 for (int day = THURSDAY; day <=SATURDAY; day++){
-	cout << displayDay[day] << endl;
-	int daySold = 0;
-	int daytotal = 0;
-	for(int section = FLOOR; section <= UPPER_BALCONY; section++){	
 			int sum = 0;
-			for(int seat = 0; seat < MAX_SEATS; seat++){		
-				sum = sum + ticket[section][THURSDAY][seat];
-		
-				} 
-				daySold = daySold + sum;
-				int floorTotal = sum * priceArray[section];
-				daytotal = daytotal + floorTotal;
-				cout <<  displayFloor[section] << " Tickets sold: " << sum << " $" << floorTotal << endl;
-				//ticketSoldPerDay[day] =+ daySold;
-				//ticketCashAmountPerDay[day] =+ daytotal;
-		} 
-	
-		//daySold = 0;
-	}
-	//totals per day
-	//for (int i = 0; i < 3; i++){
-	//cout << displayDay[i] << " Total tickets sold " << ticketSoldPerDay[i] << " $" << ticketCashAmountPerDay[i] << endl;
-	
-	}
+			int floorTotal = 0;	
+				for(int seat = 0; seat < MAX_SEATS; seat++){										
+					sum = sum + ticket[FLOOR][day][seat];
+					}	cout << "Floor sum: " << sum << endl;
+			}
+	} 
 	return 0;
 	
 }
