@@ -3,13 +3,14 @@
 #include <fstream>
 #include <iomanip>
 #include <sstream>
+#include <sstream>
 
 using namespace std;
 
-const string DATA_FILE = "gradeBook.txt";
 const int NUMBER_OF_ASSIGNMENTS = 10;
 const int NUMBER_OF_EXAMS = 3;
-ifstream fin;
+ifstream fin; 
+
 
 class grades{
 public:
@@ -23,38 +24,39 @@ public:
 
 grades student;
 
-void read_record(){
-	fin >> student.first_name;
-	fin >> student.last_name;
-	fin >> student.id;
+void read_record(string line){
+	istringstream iss(line);
+	iss >> student.first_name;
+	iss >> student.last_name;
+	iss >> student.id;
 	for(int i = 0 ; i < NUMBER_OF_ASSIGNMENTS; i++){
-		student.assignment_grades[i];
+		iss >> student.assignment_grades[i];
 	}
 	for(int i = 0 ; i < NUMBER_OF_EXAMS; i++){
-		student.exam_grades[i];
+		iss >> student.exam_grades[i];
 	}	
-	fin >> student.final_exam_grade;	
+	iss >> student.final_exam_grade;
 }
 
 
-
-//Calculate the grade as follows: 
-//10 programs 3% each,   30
-//(p1 + p2 + p3 ... + p10 ) * .03
- 
-//3 exams 15% each, and  45
-//(e1 + e2 + e3) * .15
-
-//final exam 25%.        25
-
-float calculate_grade(){
-	
+float calculate_grade(){	
+	float grade = 0;	
+	float programsTotal = 0;
+	float examsTotal = 0;
+	float final = student.final_exam_grade;
+	for (int i = 0; i < 10; i++){
+	programsTotal = programsTotal + student.assignment_grades[i];
+		}
+	for (int i = 0; i < 3; i++){
+	examsTotal = examsTotal + student.exam_grades[i];
+		}
+	programsTotal = (programsTotal/1000) * 30;
+	examsTotal = (examsTotal/300) * 45;
+	final = (final/100) * 25;
+	grade = programsTotal + examsTotal + final;	
+	return grade; 
 }
 
-
-
-//Students with 90 and above averages earn an A, 80 to 89 earn a
-//B, 70 to 79 earn a C, 60 to 69 earn a D, and all grades below 60 earn an F.
 
 char get_letter_grade(float grade){
 	if(90 <= grade){
@@ -70,28 +72,26 @@ char get_letter_grade(float grade){
 	}
 }
 
-
 int main(){
+		cout << "\tFinal Grades" << endl;
 		int count = 0;
-		ifstream countStudents("gradeBook.txt");
-		while(!countStudents.eof()){
+		ifstream studentCounter("gradeBook.txt");
+		while(!studentCounter.eof()){
 			string line;
-			getline(countStudents, line, '\n');
+			getline(studentCounter, line, '\n');
 			count++;
 		}
-		cout << count << endl;
-	countStudents.close();
-/*	fin.open(DATA_FILE);
-	for (int i = 1; i < count; i++){
-		read_record();
-		if(fin.eof()){
-			break;
-		}
+		studentCounter.close();
+		ifstream fin("gradeBook.txt");
+		for (int i = 1; i < count; i++){
+			string line;
+			getline(fin, line, '\n');
+			read_record(line);	
 		float grade = calculate_grade();
 		char letter_grade = get_letter_grade(grade);
-		cout << student.first_name << " " <<gps student.last_name << '\t' << letter_grade << endl;
-	} 
-	fin.close();*/
+		cout << student.first_name << " " << student.last_name << '\t' << letter_grade << endl;
+		}
+		fin.close();
 	return 0;
 }
 
