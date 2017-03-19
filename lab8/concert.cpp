@@ -43,12 +43,16 @@ int main(){
 	userFloor = validFloor(seatInput.substr(1,1));
 	//cycles through the 20 seats per day/floor. If it finds an unsold ticket, it updates the value and breaks then stops
 		if (userDay != 99 && userFloor != 99){
-			for (int i = 0; i < MAX_SEATS; i++){
+			for (int i = 0; i < MAX_SEATS+1; i++){
 				if (ticket[userFloor][userDay][i] == 0){
 					ticket[userFloor][userDay][i] = 1;
 					break;			
-				}		
+				} else if (i == MAX_SEATS){
+				    cout << "no seats left" << endl;
+				}	
 			} 	
+		} else if((userDay +userFloor) > 98 && seatInput != "x")  {
+		    cout << "bad input" << endl;
 		}
 
 	}
@@ -78,7 +82,6 @@ for (int section = FLOOR; section <= UPPER_BALCONY; section++){
 	int allFloorSales = 0;
 	for (int day = THURSDAY; day <=SATURDAY; day++){
 		int sum = 0;
-		int floorTotal = 0;
 			for(int seat = 0; seat < MAX_SEATS; seat++){										
 				sum = sum + ticket[section][day][seat];
 				} 
