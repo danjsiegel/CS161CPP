@@ -50,9 +50,9 @@ float calculate_grade(){
 	for (int i = 0; i < 3; i++){
 	examsTotal = examsTotal + student.exam_grades[i];
 		}
-	programsTotal = (programsTotal/1000) * 30;
-	examsTotal = (examsTotal/300) * 45;
-	final = (final/100) * 25;
+	programsTotal = programsTotal * .03;
+	examsTotal = examsTotal * .15;
+	final = final * .25;
 	grade = programsTotal + examsTotal + final;	
 	return grade; 
 }
@@ -74,24 +74,17 @@ char get_letter_grade(float grade){
 
 int main(){
 		cout << "\tFinal Grades" << endl;
-		int count = 0;
 		ifstream studentCounter("gradeBook.txt");
-		while(!studentCounter.eof()){
-			string line;
-			getline(studentCounter, line, '\n');
-			count++;
+		string line;
+		while(getline(studentCounter, line)){
+			read_record(line);	
+			float grade = calculate_grade();
+			char letter_grade = get_letter_grade(grade);
+			cout << student.first_name << " " << student.last_name << '\t' << letter_grade << endl;
+		
 		}
 		studentCounter.close();
-		ifstream fin("gradeBook.txt");
-		for (int i = 1; i < count; i++){
-			string line;
-			getline(fin, line, '\n');
-			read_record(line);	
-		float grade = calculate_grade();
-		char letter_grade = get_letter_grade(grade);
-		cout << student.first_name << " " << student.last_name << '\t' << letter_grade << endl;
-		}
-		fin.close();
+
 	return 0;
 }
 
